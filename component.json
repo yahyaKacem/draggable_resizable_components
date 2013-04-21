@@ -1,0 +1,16 @@
+{
+  "name": "draggable_resizable_components",
+  "version": "0.1.0",
+  "dependencies": {
+    "jquery-ui": null,
+    "underscore": null,
+    "font-awesome": null,
+    "sass-bootstrap": null,
+    "angular-unstable": null
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components"
+  ]
+}
