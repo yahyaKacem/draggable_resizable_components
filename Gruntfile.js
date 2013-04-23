@@ -59,6 +59,9 @@ module.exports = function(grunt) {
     qunit: {
       files: ['test/**/*.html']
     },
+    jsvalidate: {
+      files: ['src/app/*js', 'src/app/**/*.js']
+    },
     compass: {
       common: {
         options: {
