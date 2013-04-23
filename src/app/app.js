@@ -5,7 +5,19 @@ var app = angular.module('dragsizable', []);
 //#####################START dragsizable directive########################
 app.directive('dragsizable', function(){
   var linker = function(scope, element, attrs) {
-    element.draggable();
+    element.draggable({handle: ".dragger"});
+    element.resizable({
+        handles: {
+          'e': '#e',
+          'n': '#n',
+          's': '#s',
+          'w': '#w',
+          'ne': '#ne',
+          'nw': '#nw',
+          'se': '#se',
+          'sw': '#sw'
+        }
+    });
   };
   return {
     scope:       {},
@@ -13,14 +25,12 @@ app.directive('dragsizable', function(){
     replace:     true,
     transclude:  true,
     link:        linker,
-    templateUrl: "assets/tpls/dragsizable.tpl.html"
+    templateUrl: "assets/tpls/dragsizable2.tpl.html"
   };
 });
 //######################END dragsizable directive#########################
 //########################################################################
 //######################START MainCtrl controller#########################
-app.controller('MainCtrl', ['$scope', function($scope){
-  
-}]);
+app.controller('MainCtrl', ['$scope', function($scope){}]);
 //#######################END MainCtrl controller##########################
 //########################################################################
